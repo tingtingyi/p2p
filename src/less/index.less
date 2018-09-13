@@ -1,0 +1,95 @@
+p,div,body,html,{
+    margin: 0;
+    padding: 0;
+}
+//重置nav边框
+.navbar{
+    border-radius: 0px;
+    margin-bottom: 0px;
+}
+// 顶部导航
+.navbar-inverse .navbar-brand span{
+    margin-right: 6px;
+    color:#fff;
+}
+.navbar-inverse .navbar-brand i{
+    font-size: 24px;
+    color:#fff;
+}
+.navbar-inverse .navbar-nav>li>a{
+    color:#fff;
+    &:hover{
+        color: #00a8ff;
+        text-decoration: underline;
+    }
+}
+// 主导航
+.navbar-default{
+    margin-bottom: 5px;
+}
+.navbar-default .navbar-nav>li>a{
+    line-height: 40px;
+    font-size:16px;
+    text-align: center;
+}
+.tooltip img{
+    width:100px;
+}
+.navbar-default .navbar-nav>li>a:hover{
+    color:#09d;
+    background-color: #f0f0f0;
+}
+// 三大特色
+.feature{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    .row{
+        div{
+            background: url("../../../images/feature01.png") no-repeat left center;
+            padding-left:80px; 
+            height: 80px;
+        };
+        div:nth-of-type(2){
+            background: url("../../../images/feature02.png") no-repeat left center;
+        };
+        div:nth-of-type(3){
+            background: url("../../../images/feature03.png") no-repeat left center;
+        }
+    };
+    h4{
+        font-weight: bold;
+    };
+}
+// 进行中借款
+.information{
+    padding: 0;
+    .ti{
+        border-bottom: 1px solid #ccc;
+        margin-bottom: 16px;
+        .pull-left{
+            font-size:24px;
+            font-weight: bold;
+            line-height: 30px;
+            color:#2e8ece;
+            border-bottom: 3px solid #2e8ece;
+            margin-left: 0;
+        }
+        .pull-right{
+            color:#337ab7;
+            
+            line-height: 30px;
+        }
+    }
+    table{
+        tr{
+            th{
+                color: #999999;
+            }
+            td{
+                font-size:16px;
+            }
+        }
+    }
+   
+}
+
