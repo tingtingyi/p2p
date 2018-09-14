@@ -1,44 +1,6 @@
-p,div,body,html,{
-    margin: 0;
-    padding: 0;
-}
-//重置nav边框
-.navbar{
-    border-radius: 0px;
-    margin-bottom: 0px;
-}
-// 顶部导航
-.navbar-inverse .navbar-brand span{
-    margin-right: 6px;
-    color:#fff;
-}
-.navbar-inverse .navbar-brand i{
-    font-size: 24px;
-    color:#fff;
-}
-.navbar-inverse .navbar-nav>li>a{
-    color:#fff;
-    &:hover{
-        color: #00a8ff;
-        text-decoration: underline;
-    }
-}
-// 主导航
-.navbar-default{
-    margin-bottom: 5px;
-}
-.navbar-default .navbar-nav>li>a{
-    line-height: 40px;
-    font-size:16px;
-    text-align: center;
-}
-.tooltip img{
-    width:100px;
-}
-.navbar-default .navbar-nav>li>a:hover{
-    color:#09d;
-    background-color: #f0f0f0;
-}
+// 引入头部样式
+@import url("header.less");
+
 // 三大特色
 .feature{
     margin-top: 20px;
@@ -63,33 +25,107 @@ p,div,body,html,{
 // 进行中借款
 .information{
     padding: 0;
-    .ti{
-        border-bottom: 1px solid #ccc;
-        margin-bottom: 16px;
+    .panel-default{
+        border:0px;
+        box-shadow: none;
+    }
+    .panel-default>.panel-heading{
+        background-color: transparent;
+        padding: 0px;
+        border-bottom:1px solid #ccc;
+        margin-bottom: 20px;
+    }
         .pull-left{
             font-size:24px;
             font-weight: bold;
-            line-height: 30px;
+            height:36px;
             color:#2e8ece;
             border-bottom: 3px solid #2e8ece;
             margin-left: 0;
+            margin-bottom: 0px;
         }
         .pull-right{
             color:#337ab7;
-            
             line-height: 30px;
+            padding-top: 20px;
+            padding-right: 10px;
         }
-    }
-    table{
-        tr{
-            th{
-                color: #999999;
-            }
-            td{
-                font-size:16px;
+    // .panel-body{
+        padding: 0px;
+        table{
+            tr{
+                th{
+                    color: #999999;
+                }
+                td{
+                    font-size:16px;
+                    vertical-align: middle;
+                }
             }
         }
-    }
-   
+    // }
 }
 
+// 新闻咨讯
+.new{
+    padding: 0;
+    .panel{
+        box-shadow: none;
+    }
+    .panel-default{
+        border:0px;
+    }
+    .panel-default>.panel-heading{
+        background-color: transparent;
+        padding: 0px;
+        border-bottom:1px solid #ccc;
+        margin-bottom: 20px;
+        .pull-left{
+            font-size:24px;
+            font-weight: bold;
+            height:36px;
+            color:#2e8ece;
+            border-bottom: 3px solid #2e8ece;
+            margin-left: 0;
+            margin-bottom: 0px;
+        }
+        .pull-right{
+            color:#337ab7;
+            line-height: 30px;
+            padding-top: 20px;
+            padding-right: 10px;
+        }
+    }
+    .panel-body{
+        padding: 0;
+        ul{
+            padding: 0px;
+            list-style: none;
+            li{
+                border-bottom: 1px dotted #eee;
+                &:hover{
+                    a{
+                        color: #09d;  
+                        text-decoration: none;
+                    }
+                }
+                p{
+                    line-height: 38px;
+                    a{
+                        color:#555;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+// 引入页脚样式
+@import url("footer.less");
+
+@media all and (max-width:520px){
+    .hidetitle{
+        display: none;
+    }
+}
