@@ -18,14 +18,8 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
-                <li>
+                <li id="homepage">
                     <a href="index.php">首页</a>
-                </li>
-                <li>
-                    <a href="login.php">登录</a>
-                </li>
-                <li>
-                    <a href="register.php">快速注册</a>
                 </li>
                 <li>
                     <a href="#">帮助</a>
@@ -36,3 +30,22 @@
     </div>
     <!-- /.container-fluid -->
 </nav>
+<script src="./lib/jquery/jquery.min.js"></script>
+<script>
+    $.get("./api/checkstate.php",function(data){
+        console.log(data)
+        if(data.isSuccess){
+            var htmlstr=`
+            <li><a href="">${data.username}</a></li>
+            <li><a href="login.php">赶快充值</a></li>
+            <li><a href="api/loginout.php">注销</a></li>`;
+            $("#homepage").after(htmlstr);
+        }else{
+            var htmlstr=`
+            <li><a href="login.php">登录</a></li>
+            <li><a href="register.php">快速注册</a></li>`;
+            $("#homepage").after(htmlstr);
+        }
+    },"json")
+    
+</script>

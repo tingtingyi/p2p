@@ -12,8 +12,9 @@
 </head>
 
 <body>
-    <!-- 网页头部 导航 -->
+     <!-- 网页头部 导航 -->
         <?php
+            require_once("regloginheader.php");
             require_once("header.php");
         ?>
     <!-- banner -->

@@ -14,9 +14,12 @@
 <body>
     <!-- 网页头部 导航 -->
     <?php
+        require_once("regloginheader.php");
         require_once("header.php");
     ?>
-    到处可见
+    <div calss="container">
+    内容
+    </div>
     <!-- 引入页脚 -->
     <?php
         require_once("footer.php");
